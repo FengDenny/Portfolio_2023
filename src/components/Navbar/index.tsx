@@ -32,7 +32,7 @@ function Navbar({
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween}  fixed top-0 z-30 h-40  w-full  `}
+        className={`${navbarBackground} ${flexBetween}  fixed top-0 z-999 h-40 w-full  `}
       >
         <div className={`${flexBetween} mx-auto w-4/6`}>
           {/* LEFT SIDE */}
