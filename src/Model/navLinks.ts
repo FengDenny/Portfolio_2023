@@ -6,10 +6,10 @@ export const navLinks = [
     title: "About",
   },
   {
-    title:"Projects"
-  },,
-  {
     title:"Stack"
+  },
+  {
+    title:"Projects"
   },
   {
     title: "Contact",
