@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "color-white": "#FFFFFF",
         "color-description": "#646379",
+        "color-description-normal": "#5F6368",
         "primary-100": "#2C2B47",
         "primary-300": "#1A1934",
         "primary-pink": "#FCAFB7",
@@ -19,6 +20,7 @@ module.exports = {
       backgroundSize: {
         zeroThree: "0 3px",
         OneHund3Pixel: "100% 3px ",
+        Ninety3Pixel: "90% 3px ",
       },
       backgroundPosition: {
         "0-100": "0 100%",
@@ -33,13 +35,24 @@ module.exports = {
         35: "35px",
         40: "40px",
         50: "50px",
+        160: "160px",
         172: "172px",
-        215: "215px",
+        332: "332px",
       },
+      borderRadius: {
+        "3xl": "2rem",
+        full: "5rem",
+      },
+
       width: {
         "11.5/12": "97.666667%;",
         "11.4/12": "95.666667%;",
         "10.5/12": "92.666667%;",
+        "4.5/6": "78.3333%",
+      },
+      height: {
+        "screen-90": "90vh",
+        "screen-70": "70vh",
       },
 
       fontFamily: {
@@ -48,6 +61,10 @@ module.exports = {
       },
       fontSize: {
         "4xl": "2.5rem",
+      },
+      zIndex: {
+        999: "999",
+        1000: "1000",
       },
 
       animation: {
