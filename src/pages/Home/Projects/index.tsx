@@ -1,9 +1,9 @@
 import { useState } from "react";
 import SectionLayout from "@/components/helper/SectionLayout";
 import Tabs from "@/components/tab/Tab";
-import StanceLab from "./StanceLab";
-import TheMovieBox from "./TheMovieBox";
-import WarframeLeeter from "./WarframeLeeter";
+import StanceLab from "./StanceLab/StanceLab";
+import TheMovieBox from "./TheMovieBox/TheMovieBox";
+import WarframeLeeter from "./WarFrameLeeter/WarframeLeeter";
 import StanceLabLogo from "@/assets/project_logo/StanceLab.png";
 import TMBLogo from "@/assets/project_logo/TMB.png";
 import WFLLogo from "@/assets/project_logo/WFL.png";
