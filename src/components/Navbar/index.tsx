@@ -34,7 +34,7 @@ function Navbar({
       <div
         className={`${navbarBackground} ${flexBetween}  fixed top-0 z-999 h-40 w-full  `}
       >
-        <div className={`${flexBetween} relative top-10 mx-auto w-4/6`}>
+        <div className={`${flexBetween} relative top-5 mx-auto w-4/6`}>
           {/* LEFT SIDE */}
           <div className={`${flexBetween} w-2/6 gap-16 `}>
             <img src={logo_png} alt="logo" className="h-28 w-28 rotate-45" />
