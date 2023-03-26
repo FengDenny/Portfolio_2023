@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import AnimatedRight from "@/components/Navbar/AnimatedRight";
-import AnimatedTop from "@/components/Navbar/AnimatedTop";
-import AnimatedLeft from "@/components/Navbar/AnimatedLeft";
 import { SelectedPage } from "@/Model/types";
 import HomePage from "@/pages/Home";
-// ENUM - to define a set of names constant (not to be changed)
 
 function App() {
   const { Home } = SelectedPage;
@@ -38,19 +35,7 @@ function App() {
         isMenuToggled={isMenuToggled}
         setIsMenuToggled={setIsMenuToggled}
       >
-        {/* <AnimatedLeft
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                  isMenuToggled={isMenuToggled}
-                  setIsMenuToggled={setIsMenuToggled}
-                /> */}
-        {/* <AnimatedRight
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-          isMenuToggled={isMenuToggled}
-          setIsMenuToggled={setIsMenuToggled}
-        />   */}
-        <AnimatedTop
+        <AnimatedRight
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
           isMenuToggled={isMenuToggled}
