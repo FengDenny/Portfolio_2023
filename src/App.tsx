@@ -3,7 +3,10 @@ import Navbar from "@/components/Navbar";
 import AnimatedRight from "@/components/Navbar/AnimatedRight";
 import { SelectedPage } from "@/Model/types";
 import HomePage from "@/pages/Home";
-
+import StanceLabProject from "@/pages/Home/Projects/StanceLab/ProjectInfo";
+import TMBProject from "@/pages/Home/Projects/TheMovieBox/ProjectInfo";
+import WFLProject from "@/pages/Home/Projects/WarframeLeeter/ProjectInfo";
+import { useRoutes } from "react-router-dom";
 function App() {
   const { Home } = SelectedPage;
 
@@ -26,6 +29,17 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const Main = () => {
+    let routes = useRoutes([
+      { path: "/", element: <HomePage /> },
+      { path: "/stancelab", element: <StanceLabProject /> },
+      { path: "/themoviebox", element: <TMBProject /> },
+      { path: "/warframeleeter", element: <WFLProject /> },
+    ]);
+
+    return routes;
+  };
+
   return (
     <div className="app bg-primary-100">
       <Navbar
@@ -43,7 +57,7 @@ function App() {
         />
       </Navbar>
       <main>
-        <HomePage />
+        <Main />
       </main>
     </div>
   );
