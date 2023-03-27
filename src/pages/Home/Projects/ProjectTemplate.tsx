@@ -34,7 +34,7 @@ const ProjectTemplate = ({
       </h4>
       <button
         onClick={() => navigate(pageURL)}
-        className={`${buttonHoverEffect}   mt-4 w-5/12 rounded-lg border-2 border-primary-pink bg-primary-pink p-2 text-sm text-primary-300 shadow-2xl sm:text-lg md:w-2/12 `}
+        className={`${buttonHoverEffect}   mt-4 h-10 w-40	 rounded-lg border-2 border-primary-pink bg-primary-pink  text-sm text-primary-300 shadow-2xl sm:text-lg md:w-36 `}
       >
         View Project
       </button>
