@@ -14,8 +14,6 @@ function Link({ page, selectedPage, setSelectedPage }: Props) {
   const aLinkUnderLine =
     " bg-zeroThree  bg-0-100  bg-no-repeat transition-bgSize5sEaseInOut  hover:bg-OneHund3Pixel bg-gradient-lightPink";
 
-  console.log(window.location.pathname === "/");
-
   return (
     <HashLink
       to={`/#${toLoweredCase}`}
