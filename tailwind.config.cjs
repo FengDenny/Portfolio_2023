@@ -72,6 +72,7 @@ module.exports = {
         inRight: "right 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);",
         inLeft: "left 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86)",
         popIn: "popIn 0.5S cubic-bezier(0.26, 0.53, 0.74, 1.48)",
+        spin: " spin 1s linear infinite",
       },
       keyframes: {
         popIn: {
@@ -132,7 +133,16 @@ module.exports = {
             transform: "translateX(-0%)",
           },
         },
+        spin: {
+          from: {
+            transform: " rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
+
       skew: {
         17: "17deg",
       },
