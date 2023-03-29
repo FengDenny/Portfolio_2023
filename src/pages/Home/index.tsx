@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import TechStack from "./TechStack";
 import Project from "./Projects";
+import Contact from "./Contact/Contact";
 
 type Props = {};
 
@@ -13,6 +14,7 @@ function index({}: Props) {
       <About />
       <TechStack />
       <Project />
+      <Contact />
     </section>
   );
 }
