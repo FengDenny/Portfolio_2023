@@ -3,8 +3,6 @@ import SectionLayout from "@/components/helper/SectionLayout";
 type Props = {};
 
 const index = (props: Props) => {
-  const baseDiv =
-    "before:absolute before:-right-10 before:h-0 before:w-0 before:border-solid before:border-t-172 before:border-l-40 before:sm:border-b-160 before:border-t-transparent before:border-b-transparent before:border-l-color-white  before:hidden before:sm:flex ";
   return (
     <SectionLayout
       id="about"
@@ -54,7 +52,8 @@ const index = (props: Props) => {
             As of 2023, I am an
             <span className="px-1 font-bold">aspiring frontend engineer</span>
             trying to break into the tech industry with experience working with
-            <span className="pl-1 font-bold">JavaScript</span>.
+            anything
+            <span className="pl-1 font-bold">JavaScript</span> related.
             <span className="pl-1 ">Wish me luck</span>!
           </p>
         </div>
