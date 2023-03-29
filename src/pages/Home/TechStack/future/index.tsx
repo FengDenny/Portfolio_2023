@@ -1,5 +1,5 @@
 import React from "react";
-import Typewriter from "./future/Typewriter";
+import Typewriter from "./Typewriter";
 
 type Props = {
   content: string;
