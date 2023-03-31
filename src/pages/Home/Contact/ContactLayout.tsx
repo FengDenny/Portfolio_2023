@@ -46,7 +46,7 @@ const ContactLayout = ({
       <div className="mx-auto mt-40 flex w-4/6  flex-col  text-color-white">
         <h2 className="mx-auto text-3xl font-bold ">Connect with me</h2>
         <span className="mx-auto mt-1 w-44 border-b border-solid border-b-color-description"></span>
-        <p className="description-text mx-auto mt-4 w-80 text-xl font-normal text-color-description sm:w-96">
+        <p className="description-text relative left-6  mx-auto mt-4 w-80 text-xl font-normal text-color-description sm:w-96">
           Currently looking for opportunities to learn and grow. If any, send me
           an <span className="text-color-white">email</span> or message me on{" "}
           <a
@@ -61,12 +61,12 @@ const ContactLayout = ({
         </p>
       </div>
       <div className="mx-auto mt-2 flex h-auto  w-5/6 flex-col  flex-wrap justify-between py-24 text-color-white sm:flex-row">
-        <div className="mx-auto h-auto w-72  md:w-80">
+        <div className="relative top-6 mx-auto  h-auto w-72 md:w-80">
           <img src={contact} alt="contact me" />
         </div>
         <form
           ref={formRef}
-          className="mx-auto mt-10 flex h-auto w-96  flex-col rounded-sm bg-color-white p-10 shadow-lg shadow-primary-pink"
+          className="relative top-4 left-4 mx-auto mt-10  flex h-auto w-96  flex-col rounded-sm bg-color-white p-10 shadow-lg shadow-primary-pink sm:-top-6 sm:left-0 "
         >
           <h2 className="pb-6 text-primary-300">Send me an email</h2>
           <div className="flex w-72 flex-col">
