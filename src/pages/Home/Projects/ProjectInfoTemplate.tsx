@@ -1,13 +1,15 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { view_projects } from "@/Model/view_projects";
 type Props = {
   imgLogo: string;
   liveURL: string;
   heroImg: string;
+  note?: string;
   projectDescription: React.ReactNode;
-  dutiesDescription: string;
+  dutiesDescription: React.ReactNode;
   dutyFulfilledDescription: React.ReactNode;
   learningDescription: React.ReactNode;
-  // nextProjectHeader: string;
-  // nextProjectLinks: string[];
   stackLogo: {
     id: number;
     stack_title: string;
@@ -21,6 +23,7 @@ type Props = {
 };
 
 const ProjectInfoTemplate = ({
+  note,
   projectDescription,
   imgSnippets,
   stackLogo,
@@ -29,13 +32,18 @@ const ProjectInfoTemplate = ({
   dutiesDescription,
   dutyFulfilledDescription,
   learningDescription,
-  // nextProjectHeader,
-  // nextProjectLinks,
   heroImg,
 }: Props) => {
+  const [projects, _] = useState<
+    Array<{
+      sectionID: string;
+      project: string;
+      to: string;
+    }>
+  >(view_projects);
+
   const tabLabelUnderline =
     "bg-zeroThree  bg-0-100  bg-no-repeat  hover:bg-OneHund3Pixel hover:bg-gradient-white hover:transition-bgSize5sEaseInOut delay-75 duration-75 transition-all";
-
   const viewIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +105,9 @@ const ProjectInfoTemplate = ({
             </a>
             <span className="ml-2 text-color-white">{viewIcon}</span>
           </div>
+          <span className="description-text font-italic font-bold italic text-color-description">
+            {note}
+          </span>
         </div>
         <div className="mx-auto py-10 sm:mx-0 ">
           <img
@@ -149,6 +160,39 @@ const ProjectInfoTemplate = ({
               {learningDescription}
             </p>
           </div>
+        </div>
+        <div className="py-10 ">
+          <h2 className="underline decoration-color-description underline-offset-4">
+            View Projects
+          </h2>
+          <ul className="mt-5 ">
+            {projects.map((items) => {
+              const { to, sectionID, project } = items;
+
+              return (
+                <li className="py-2" key={sectionID}>
+                  <NavLink
+                    to={to}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-primary-pink"
+                        : `${tabLabelUnderline} hover:text-primary-pink-hover`
+                    }
+                  >
+                    {project}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="py-5  ">
+          <h2 className="underline decoration-color-description underline-offset-4">
+            Upcoming Project
+          </h2>
+          <span className="description-text relative top-2 text-lg text-color-description">
+            To be announced soon. Stay tuned!
+          </span>
         </div>
       </div>
     </section>
