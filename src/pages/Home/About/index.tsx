@@ -40,7 +40,7 @@ const index = (props: Props) => {
             <span className="pl-1 font-bold">
               Bachelor of Science, Computer Science degree
             </span>
-            . Along that way I gained experience in
+            . Along that way, I gained experience in
             <span className="pl-1 font-bold">teamwork</span>,
             <span className="pl-1 font-bold">soft skills</span>,
             <span className="pl-1 font-bold">hard skills</span>,
