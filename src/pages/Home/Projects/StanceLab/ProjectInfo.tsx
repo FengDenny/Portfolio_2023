@@ -10,7 +10,7 @@ const ProjectInfo = (props: Props) => {
   const projectDescription_parsed = parse(
     `My first gig was 
   <span className="font-bold">Stance Lab</span>, a single page application for a car shop business.  I built this project with another developer using 
-  <span className="font-bold">CSS frameworks</span>, <span className="font-bold">JavaScript</span>,<span className="font-bold pl-2">PHP</span>, <span className="font-bold">HTML5</span>, and  <span className="font-bold">Material Design for Bootstrap</span>. Although, this was a single application, this project required a lot of research to produce what was needed for their business.`
+  <span className="font-bold">CSS frameworks</span>, <span className="font-bold">JavaScript</span>,<span className="font-bold pl-2">PHP</span>, <span className="font-bold">HTML5</span>, and  <span className="font-bold">Material Design for Bootstrap</span>. Although, this was a single application, this project required a lot of research and numerous revisions of <span className="font-bold">website content plan</span> to produce what was needed to fit their business needs.`
   );
 
   const dutiesDescription =
