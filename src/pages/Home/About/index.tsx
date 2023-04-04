@@ -3,18 +3,22 @@ import SectionLayout from "@/components/helper/SectionLayout";
 type Props = {};
 
 const index = (props: Props) => {
+  const darkThemeStyle = "dark:text-color-white";
+
+  const lightThemeStyle = "text-primary-100";
+
   return (
     <SectionLayout
       id="about"
       styling={`relative  mt-60 flex h-auto w-5/6 flex-col gap-2  
       `}
-      whiteColorBGStyle="bg-color-white rounded-tr-3xl rounded-br-full -inset-8  -skew-y-3 "
+      whiteColorBGStyle="dark:bg-color-white bg-primary-100   rounded-tr-3xl rounded-br-full -inset-8  -skew-y-3 "
     >
-      <h2 className="z-40 mx-auto w-4/6 pt-11 pl-10 text-lg text-primary-300 underline decoration-color-description underline-offset-4 sm:text-2xl">
+      <h2 className="z-40 mx-auto w-4/6 pt-11 pl-10 text-lg text-color-white underline decoration-color-description underline-offset-4 dark:text-primary-300 sm:text-2xl">
         About me
       </h2>
-      <div className="description-text relative  mx-auto w-4/6  pt-5 pl-10 font-normal text-color-description-normal ">
-        <div className="sm:w-4.5/6 sm:text-lg">
+      <div className="description-text relative  mx-auto w-4/6  pt-5 pl-10 font-normal text-color-white dark:text-color-description-normal ">
+        <div className="sm:w-4.5/6 sm:text-lg ">
           <p className="pb-4">
             Hi there, I’m Denny. I have to thank
             <span className="pl-1 font-bold">Udemy.com</span> for helping me
