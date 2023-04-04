@@ -78,6 +78,9 @@ module.exports = {
         inLeft: "left 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86)",
         popIn: "popIn 0.5S cubic-bezier(0.26, 0.53, 0.74, 1.48)",
         spin: " spin 1s linear infinite",
+        float: "float 2s ease-in-out infinite",
+        translateYBTop: "translateYBottomTop 2s forwards",
+        translateYTBottom: "translateYTopBottom 2s forwards",
       },
       keyframes: {
         popIn: {
@@ -144,6 +147,37 @@ module.exports = {
           },
           to: {
             transform: "rotate(360deg)",
+          },
+        },
+        float: {
+          "0%": {
+            transform: "translatey(0px)",
+          },
+          "50%": {
+            transform: "translatey(-8px)",
+          },
+          "100% ": {
+            transform: "translatey(0px)",
+          },
+        },
+        translateYBottomTop: {
+          "25%": {
+            transform: "translateY(1.3rem)",
+            opacity: 0,
+          },
+          "26%": {
+            transform: " translateY(-1.3rem)",
+            opacity: 0,
+          },
+        },
+        translateYTopBottom: {
+          "25%": {
+            transform: "translateY(-1.3rem)",
+            opacity: 0,
+          },
+          "26%": {
+            transform: " translateY(1.3rem)",
+            opacity: 0,
           },
         },
       },
