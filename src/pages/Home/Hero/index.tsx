@@ -20,7 +20,7 @@ const index = (props: Props) => {
     "transtion delay-75 duration-100 ease-in hover:scale-110 hover:text-primary-pink-hover";
 
   return (
-    <AnimateOnScrollObserver styling="animate-fadeIn opacity-0 transition ease-in-expo">
+    <AnimateOnScrollObserver styling="animate-fadeIn">
       <section
         className="relative mx-auto flex w-4/6  flex-col
       justify-between 
@@ -34,10 +34,8 @@ const index = (props: Props) => {
             <div className="flex flex-row">
               <AnimateOnScrollObserver styling="animate-translateYBTop ">
                 <h2
-                  className="py-4 pl-4 text-primary-300
-            underline
-            decoration-color-description underline-offset-8 dark:text-color-white 
-            "
+                  className="py-4 pl-4 text-primary-300 underline
+            decoration-color-description underline-offset-8 dark:text-color-white "
                 >
                   Denny Feng
                 </h2>
