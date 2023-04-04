@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +17,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 html,
 body,
 #root,
@@ -25,9 +26,12 @@ body,
     height: 100%;
     width: 100%;
     font-family: 'Fredoka One', cursive;
-    @apply text-color-white;
-    @apply bg-primary-100;
+    /* Beautify css editor.formatOnSave": false */
+    @apply dark:bg-primary-100 
 }
+
+
+
 
 .description-text {
     font-family: 'Rokkitt', serif;
