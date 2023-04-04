@@ -12,7 +12,7 @@ const index = (props: Props) => {
   const lightThemeStyle = "text-primary-100";
 
   const afterCardDesign =
-    "after:absolute after:top-0 after:block after:h-full after:w-full after:origin-top-left  after:skew-Y-17 after:bg-primary-100 after:dark:bg-color-white";
+    "after:absolute after:top-0 after:block after:h-full after:w-full after:origin-top-left  after:skew-Y-17 after:bg-primary-100 after:dark:bg-color-white after:transition-colors after:delay-100 after:duration-100 after:ease-in-out";
 
   const smallViewPortCardDesign = "sm:w-3/6 md:w-4/6 sm:top-2  sm:right-0";
 

@@ -38,7 +38,10 @@ const index = (props: Props) => {
       </h2>
       <AnimateOnScrollObserver styling="animate-popIn ">
         <Tabs
-          labelStyling="mx-auto h-auto pt-5 shadow-2xl w-5/6 sm:w-2/6 py-5 dark:bg-color-white  bg-primary-100  rounded-md mt-5 divide-y "
+          labelStyling="mx-auto h-auto pt-5 shadow-2xl w-5/6 sm:w-2/6 py-5 dark:bg-color-white 
+           bg-primary-100  rounded-md mt-5 divide-y 
+           transition-colors delay-100 duration-100 ease-in-out
+           "
           selectedTab={selectedTab}
           onClick={setSelectedTab}
           tabs={tabs}

@@ -46,7 +46,10 @@ const ContactLayout = ({
 
   return (
     <section id="contact">
-      <div className="mx-auto mt-40 flex w-4/6  flex-col  text-primary-100 dark:text-color-white">
+      <div
+        className="mx-auto mt-40 flex w-4/6  flex-col  text-primary-100 transition-colors       
+       delay-100 duration-100 ease-in-out dark:text-color-white"
+      >
         <h2 className="mx-auto text-2xl  font-bold sm:text-3xl ">
           Connect with me
         </h2>
@@ -59,7 +62,7 @@ const ContactLayout = ({
         >
           Currently looking for opportunities to learn and grow. If any, send me
           an{" "}
-          <span className="font-bold text-primary-300 dark:text-color-white">
+          <span className="font-bold text-primary-300 transition-colors  delay-100 duration-100 ease-in-out dark:text-color-white">
             email
           </span>{" "}
           or message me on
@@ -76,7 +79,10 @@ const ContactLayout = ({
           . Looking forward to speaking with you!
         </p>
       </div>
-      <div className="mx-auto mt-2 flex h-auto  w-5/6 flex-col  flex-wrap justify-between py-24 text-color-white sm:flex-row">
+      <div
+        className="mx-auto mt-2 flex h-auto  w-5/6 flex-col  flex-wrap justify-between py-24 text-color-white transition-colors
+             delay-100 duration-100 ease-in-out sm:flex-row"
+      >
         <div className="relative top-6 mx-auto  h-auto w-52 md:w-80">
           {theme ? (
             <img src={contact} alt="contact me" />
@@ -86,10 +92,12 @@ const ContactLayout = ({
         </div>
         <form
           ref={formRef}
-          className="relative top-4 left-4 mx-auto mt-10  flex h-auto w-80  
-          flex-col rounded-lg bg-primary-300 p-10 shadow-lg shadow-primary-100 
-          dark:bg-color-white  dark:shadow-primary-pink   
-          sm:-top-6 sm:left-0 sm:w-96"
+          className="delay-70 relative top-4 left-4 mx-auto  mt-10 flex h-auto  
+          w-80 flex-col rounded-lg bg-primary-300 p-10 shadow-lg 
+          shadow-primary-100  transition-colors   
+          duration-75 ease-in-out dark:bg-color-white
+          dark:shadow-primary-pink sm:-top-6 sm:left-0 sm:w-96
+          "
         >
           <h2 className="pb-6 text-color-white dark:text-primary-300">
             Send me an email

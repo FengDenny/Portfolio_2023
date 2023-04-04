@@ -21,7 +21,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
     "transtion delay-75 duration-100 ease-in hover:scale-110 hover:text-primary-pink-hover";
 
   return (
-    <footer className="bg-color-white py-24   dark:bg-primary-300">
+    <footer className="bg-color-white py-24   transition-colors  ease-in-out dark:bg-primary-300">
       <div className="mx-auto flex  w-4/6  flex-col justify-between sm:flex-row">
         <div className="mx-auto sm:mx-0">
           {theme ? (
