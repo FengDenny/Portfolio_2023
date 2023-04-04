@@ -2,7 +2,7 @@ import React from "react";
 import { SelectedPage } from "@/Model/types";
 import { navLinks } from "@/Model/navLinks";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import Link from "../Links/Link";
+import Link from "../../Links/Link";
 import { useTheme } from "@/components/helper/ThemeContext";
 import { BiMoon, BiSun } from "react-icons/bi";
 type Props = {
@@ -58,7 +58,7 @@ const index = ({
             onClick={themeToggle}
             aria-label="Theme toggle"
           >
-            {theme ? <BiSun size={20} /> : <BiMoon size={20} />}
+            {theme ? <BiSun size={30} /> : <BiMoon size={30} />}
           </button>
           {/* <button className="relative right-10">Download Resume</button> */}
         </div>

@@ -1,7 +1,7 @@
 // Snippet tsrafce
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { navLinks } from "@/Model/navLinks";
-import Link from "./Links/Link";
+import Link from "../Links/Link";
 import { SelectedPage } from "@/Model/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import logo_png from "@/assets/logo_png.png";
@@ -83,7 +83,7 @@ function Navbar({
                   onClick={themeToggle}
                   aria-label="Theme toggle"
                 >
-                  {theme ? <BiSun size={20} /> : <BiMoon size={20} />}
+                  {theme ? <BiSun size={24} /> : <BiMoon size={24} />}
                 </button>
                 <button>Download Resume</button>
               </div>
