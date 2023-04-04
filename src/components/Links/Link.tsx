@@ -6,9 +6,10 @@ type Props = {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  styling?: string;
 };
 
-function Link({ page, selectedPage, setSelectedPage }: Props) {
+function Link({ page, selectedPage, setSelectedPage, styling }: Props) {
   const toLoweredCase = page.toLowerCase().replace(" ", "") as SelectedPage;
 
   const aLinkUnderLine =
@@ -17,7 +18,7 @@ function Link({ page, selectedPage, setSelectedPage }: Props) {
   return (
     <HashLink
       to={`/#${toLoweredCase}`}
-      className={`transition duration-200 hover:text-primary-pink ${
+      className={`transition duration-200 hover:text-primary-pink ${styling} ${
         selectedPage === toLoweredCase ? `text-primary-pink` : ""
       } 
     
