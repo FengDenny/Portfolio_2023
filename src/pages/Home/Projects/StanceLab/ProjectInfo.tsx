@@ -1,5 +1,6 @@
 import ProjectInfoTemplate from "../ProjectInfoTemplate";
 import StanceLab from "@/assets/project_logo/StanceLab.png";
+import StanceLabLight from "@/assets/project_logo/StanceLab_light.png";
 import StanceLabHero from "@/assets/project_image/Stancelab_hero.png";
 import parse from "html-react-parser";
 import { stanceLab_stack } from "@/Model/tech_stack";
@@ -31,6 +32,7 @@ const ProjectInfo = (props: Props) => {
   return (
     <ProjectInfoTemplate
       imgLogo={StanceLab}
+      imgLightLogo={StanceLabLight}
       projectDescription={projectDescription_parsed}
       stackLogo={stanceLab_stack}
       liveURL={liveURL}

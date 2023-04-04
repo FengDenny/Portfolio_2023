@@ -1,5 +1,6 @@
 import ProjectInfoTemplate from "../ProjectInfoTemplate";
 import TMB from "@/assets/project_logo/TMB.png";
+import TMBLight from "@/assets/project_logo/TMB_light.png";
 import TMBHero from "@/assets/project_image/tmb_hero.png";
 import parse from "html-react-parser";
 import { tmb_stack } from "@/Model/tech_stack";
@@ -43,6 +44,7 @@ const ProjectInfo = (props: Props) => {
   return (
     <ProjectInfoTemplate
       imgLogo={TMB}
+      imgLightLogo={TMBLight}
       projectDescription={projectDescription_parsed}
       stackLogo={tmb_stack}
       liveURL={liveURL}

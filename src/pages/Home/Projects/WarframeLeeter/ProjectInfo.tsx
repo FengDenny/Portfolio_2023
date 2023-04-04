@@ -1,5 +1,6 @@
 import ProjectInfoTemplate from "../ProjectInfoTemplate";
 import WFL from "@/assets/project_logo/WFL.png";
+import WFL_dark from "@/assets/project_logo/WFL_dark.png";
 import WFLHero from "@/assets/project_image/wfl_hero.png";
 import parse from "html-react-parser";
 import { wfl_stack } from "@/Model/tech_stack";
@@ -39,7 +40,8 @@ const ProjectInfo = (props: Props) => {
 
   return (
     <ProjectInfoTemplate
-      imgLogo={WFL}
+      imgLogo={WFL_dark}
+      imgLightLogo={WFL}
       note={"Due to free tier backend hosting, API needs some time to load"}
       projectDescription={projectDescription_parsed}
       stackLogo={wfl_stack}
