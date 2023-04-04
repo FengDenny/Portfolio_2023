@@ -205,7 +205,7 @@ const ProjectInfoTemplate = ({
             })}
           </ul>
         </div>
-        <div className="py-5  ">
+        <div className="py-5 pb-10  ">
           <h2 className="text-color-description underline decoration-color-description underline-offset-4  dark:text-color-white">
             Upcoming Project
           </h2>
