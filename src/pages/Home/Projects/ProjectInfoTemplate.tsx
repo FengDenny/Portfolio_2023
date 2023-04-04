@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { view_projects } from "@/Model/view_projects";
+import { useTheme } from "@/components/helper/ThemeContext";
 type Props = {
   imgLogo: string;
+  imgLightLogo?: string;
   liveURL: string;
   heroImg: string;
   note?: string;
@@ -28,6 +30,7 @@ const ProjectInfoTemplate = ({
   imgSnippets,
   stackLogo,
   imgLogo,
+  imgLightLogo,
   liveURL,
   dutiesDescription,
   dutyFulfilledDescription,
@@ -43,7 +46,9 @@ const ProjectInfoTemplate = ({
   >(view_projects);
 
   const tabLabelUnderline =
-    "bg-zeroThree  bg-0-100  bg-no-repeat  hover:bg-OneHund3Pixel hover:bg-gradient-white hover:transition-bgSize5sEaseInOut delay-75 duration-75 transition-all";
+    "bg-zeroThree  bg-0-100  bg-no-repeat  hover:bg-OneHund3Pixel hover:dark:bg-gradient-white hover:bg-gradient-lightPink hover:transition-bgSize5sEaseInOut delay-75 duration-75 transition-all";
+
+  const { theme } = useTheme();
   const viewIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -73,12 +78,24 @@ const ProjectInfoTemplate = ({
    sm:flex-row"
     >
       <div>
-        <img src={imgLogo} alt="logo" className="relative top-20 xs:mx-auto" />
-        <p className="description-text relative   mt-24 w-5/6  text-xl xs:mx-auto sm:text-2xl md:w-7/12">
+        {theme ? (
+          <img
+            src={imgLogo}
+            alt="logo"
+            className="relative top-20 xs:mx-auto"
+          />
+        ) : (
+          <img
+            src={imgLightLogo}
+            alt="logo"
+            className="relative top-20 xs:mx-auto"
+          />
+        )}
+        <p className="description-text relative   mt-24 w-5/6  text-xl text-color-description dark:text-color-white   xs:mx-auto sm:text-2xl md:w-7/12">
           {projectDescription}
         </p>
         <div className="xs:mx-auto xs:w-32">
-          <h2 className="mt-6 text-xl text-color-white underline decoration-color-description underline-offset-4">
+          <h2 className="mt-6 text-xl text-primary-100 underline decoration-color-description underline-offset-4 dark:text-color-white">
             Tech Stack
           </h2>
           <div className="mt-8  inline-grid w-24 grid-cols-2 gap-4 sm:w-36 sm:grid-cols-3 md:w-80 md:grid-cols-6">
@@ -103,7 +120,9 @@ const ProjectInfoTemplate = ({
             >
               View live
             </a>
-            <span className="ml-2 text-color-white">{viewIcon}</span>
+            <span className="ml-2 text-primary-100 dark:text-color-white">
+              {viewIcon}
+            </span>
           </div>
           <span className="description-text font-italic font-bold italic text-color-description">
             {note}
@@ -118,18 +137,18 @@ const ProjectInfoTemplate = ({
         </div>
         <div className="flex flex-row  flex-wrap py-10  xs:flex-col md:justify-between">
           <div>
-            <h2 className="mt-6 text-xl text-color-white underline decoration-color-description underline-offset-4 xs:mx-auto xs:w-32">
+            <h2 className="mt-6 text-xl text-primary-100 underline decoration-color-description underline-offset-8 dark:text-color-white   xs:mx-auto xs:w-32">
               My Duties
             </h2>
-            <p className="description-text relative  mt-8 w-5/6  text-xl xs:mx-auto sm:text-2xl md:w-7/12">
+            <p className="description-text relative  mt-8 w-5/6  text-xl text-color-description dark:text-color-white xs:mx-auto sm:text-2xl md:w-7/12  ">
               {dutiesDescription}
             </p>
           </div>
           <div className="flex  flex-col items-end">
-            <h2 className="mt-24 items-start text-xl text-color-white underline decoration-color-description underline-offset-4 xs:mx-auto xs:w-40">
+            <h2 className="mt-24 items-start text-xl text-primary-100 underline decoration-color-description underline-offset-4  dark:text-color-white xs:mx-auto xs:w-40">
               Duties Fulfilled
             </h2>
-            <p className="description-text relative  mt-8 w-5/6  text-xl xs:mx-auto sm:left-9 sm:w-9/12 sm:text-2xl md:w-7/12">
+            <p className="description-text relative  mt-8 w-5/6  text-xl text-color-description dark:text-color-white xs:mx-auto sm:left-9 sm:w-9/12 sm:text-2xl md:w-7/12  ">
               {dutyFulfilledDescription}
             </p>
           </div>
@@ -153,16 +172,16 @@ const ProjectInfoTemplate = ({
         </div>
         <div className="mx-auto mt-10 w-9/12 py-24 md:w-11/12">
           <div className=" flex flex-col items-center">
-            <h2 className="mt-6 flex text-xl text-color-white underline decoration-color-description underline-offset-4 xs:w-48 xs:items-center">
+            <h2 className="mt-6 flex text-xl text-primary-100 underline decoration-color-description underline-offset-8 dark:text-color-white xs:w-48 xs:items-center">
               My Learnings
             </h2>
-            <p className="description-text relative mt-8 ml-8 w-96 text-xl xs:w-80 xs:px-10 xs:text-lg sm:text-2xl md:w-7/12">
+            <p className="description-text relative mt-8 ml-8 w-96 text-xl text-color-description dark:text-color-white xs:w-80 xs:px-10 xs:text-lg sm:text-2xl md:w-7/12  ">
               {learningDescription}
             </p>
           </div>
         </div>
         <div className="py-10 ">
-          <h2 className="underline decoration-color-description underline-offset-4">
+          <h2 className="text-color-description underline decoration-color-description underline-offset-4 dark:text-color-white  ">
             View Projects
           </h2>
           <ul className="mt-5 ">
@@ -176,7 +195,7 @@ const ProjectInfoTemplate = ({
                     className={({ isActive }) =>
                       isActive
                         ? "text-primary-pink"
-                        : `${tabLabelUnderline} hover:text-primary-pink-hover`
+                        : `${tabLabelUnderline}  text-primary-300 hover:text-primary-pink-hover dark:text-color-description  hover:dark:text-primary-pink-hover  `
                     }
                   >
                     {project}
@@ -187,7 +206,7 @@ const ProjectInfoTemplate = ({
           </ul>
         </div>
         <div className="py-5  ">
-          <h2 className="underline decoration-color-description underline-offset-4">
+          <h2 className="text-color-description underline decoration-color-description underline-offset-4  dark:text-color-white">
             Upcoming Project
           </h2>
           <span className="description-text relative top-2 text-lg text-color-description">
