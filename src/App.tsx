@@ -10,6 +10,8 @@ import { useRoutes } from "react-router-dom";
 
 import { ThemeContextProvider } from "./components/helper/ThemeContext";
 
+import Footer from "@/components/Footer";
+
 function App() {
   const { Home } = SelectedPage;
 
@@ -63,6 +65,7 @@ function App() {
         <main>
           <Main />
         </main>
+        <Footer selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </div>
     </ThemeContextProvider>
   );
