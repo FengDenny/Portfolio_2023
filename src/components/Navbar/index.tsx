@@ -8,6 +8,7 @@ import logo_png from "@/assets/logo_png.png";
 import light_logo from "@/assets/light_logo.png";
 import { useTheme } from "../helper/ThemeContext";
 import { BiMoon, BiSun } from "react-icons/bi";
+import Resume from "../../Denny_Feng's_Resume.pdf";
 
 type Props = {
   isTopOfPage: boolean;
@@ -38,12 +39,11 @@ function Navbar({
 
   const themeToggle = () => setTheme(!theme);
 
-  const darkThemeStyle = "dark:text-color-white";
-
-  const lightThemeStyle = "text-primary-100";
+  const aLinkUnderLine =
+    " bg-zeroThree  bg-0-100  bg-no-repeat transition-bgSize5sEaseInOut  hover:bg-OneHund3Pixel bg-gradient-lightPink";
 
   return (
-    <nav className={`${darkThemeStyle} ${lightThemeStyle}`}>
+    <nav className="text-primary-100 dark:text-color-white">
       <div
         className={`${navbarBackground} ${flexBetween}  fixed top-0 z-999 h-40 w-full  `}
       >
@@ -79,13 +79,29 @@ function Navbar({
               </div>
               <div className={`${flexBetween} gap-8`}>
                 <button
-                  className="focus:outline-none"
+                  className="focus:outline-none "
                   onClick={themeToggle}
                   aria-label="Theme toggle"
                 >
-                  {theme ? <BiSun size={24} /> : <BiMoon size={24} />}
+                  {theme ? (
+                    <BiSun
+                      size={26}
+                      className="transition-color fill-primary-pink delay-75 duration-75 hover:fill-color-white"
+                    />
+                  ) : (
+                    <BiMoon
+                      size={26}
+                      className="transition-color fill-color-description  delay-75 duration-75 hover:fill-primary-300"
+                    />
+                  )}
                 </button>
-                <button>Download Resume</button>
+                <a
+                  href={Resume}
+                  target="_blank"
+                  className={`${aLinkUnderLine} text-color-description hover:text-primary-pink dark:text-color-white dark:hover:text-primary-pink`}
+                >
+                  View Resume
+                </a>
               </div>
             </div>
           ) : (
