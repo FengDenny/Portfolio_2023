@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { tabs } from "@/Model/tabs";
-import Tabs from "@/components/tab/Tab";
+import Tabs from "@/components/Tab/Tab";
 import Acquired from "./Acquired";
 import Learning from "./Learning";
 import AnimateOnScrollObserver from "@/components/helper/AnimateOnScrollObserver";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SectionLayout from "@/components/helper/SectionLayout";
-import Tabs from "@/components/tab/Tab";
+import Tabs from "@/components/Tab/Tab";
 import StanceLab from "./StanceLab/StanceLab";
 import TheMovieBox from "./TheMovieBox/TheMovieBox";
 import WarframeLeeter from "./WarframeLeeter/WarframeLeeter";
