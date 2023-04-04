@@ -47,7 +47,7 @@ function App() {
 
   return (
     <ThemeContextProvider>
-      <div className="app bg-color-white dark:bg-primary-100 ">
+      <div className="app bg-color-white transition-colors delay-75 duration-75 ease-in-out dark:bg-primary-100">
         <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
