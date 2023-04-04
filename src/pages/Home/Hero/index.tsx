@@ -2,6 +2,7 @@ import React from "react";
 import ProfilePicture from "@/assets/profile_pic.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AnimateOnScrollObserver from "@/components/helper/AnimateOnScrollObserver";
+import { FaRegHandPointDown } from "react-icons/fa";
 
 type Props = {};
 
@@ -26,6 +27,32 @@ const index = (props: Props) => {
       sm:flex-row"
       >
         <div className="flex grow basis-4/5 flex-col">
+          <AnimateOnScrollObserver styling="animate-popIn ">
+            <div
+              className="mb-10 h-24 w-48 rounded-lg
+          bg-primary-pink shadow-xl dark:bg-primary-300"
+            >
+              <div className="flex flex-row">
+                <h2
+                  className="py-4 pl-4 text-primary-300
+            underline
+            decoration-color-description underline-offset-8 dark:text-color-white 
+            "
+                >
+                  Denny Feng
+                </h2>
+                <span
+                  className="relative top-6 left-1 text-xl
+               text-color-description dark:text-primary-pink"
+                >
+                  <FaRegHandPointDown />
+                </span>
+              </div>
+              <h4 className="relative left-2 pl-2 text-sm text-primary-300 dark:text-color-white">
+                Front End Engineer
+              </h4>
+            </div>
+          </AnimateOnScrollObserver>
           <AnimateOnScrollObserver styling="animate-inRight ">
             <h2
               className={`${darkThemeStyle} ${lightThemeStyle} w-64 text-2xl  sm:w-80 sm:text-3xl md:w-10/12 
