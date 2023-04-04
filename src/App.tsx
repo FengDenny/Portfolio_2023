@@ -7,6 +7,9 @@ import StanceLabProject from "@/pages/Home/Projects/StanceLab/ProjectInfo";
 import TMBProject from "@/pages/Home/Projects/TheMovieBox/ProjectInfo";
 import WFLProject from "@/pages/Home/Projects/WarframeLeeter/ProjectInfo";
 import { useRoutes } from "react-router-dom";
+
+import { ThemeContextProvider } from "./components/helper/ThemeContext";
+
 function App() {
   const { Home } = SelectedPage;
 
@@ -41,25 +44,27 @@ function App() {
   };
 
   return (
-    <div className="app bg-primary-100">
-      <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-        isMenuToggled={isMenuToggled}
-        setIsMenuToggled={setIsMenuToggled}
-      >
-        <AnimatedRight
+    <ThemeContextProvider>
+      <div className="app bg-color-white dark:bg-primary-100 ">
+        <Navbar
+          isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
           isMenuToggled={isMenuToggled}
           setIsMenuToggled={setIsMenuToggled}
-        />
-      </Navbar>
-      <main>
-        <Main />
-      </main>
-    </div>
+        >
+          <AnimatedRight
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+            isMenuToggled={isMenuToggled}
+            setIsMenuToggled={setIsMenuToggled}
+          />
+        </Navbar>
+        <main>
+          <Main />
+        </main>
+      </div>
+    </ThemeContextProvider>
   );
 }
 
