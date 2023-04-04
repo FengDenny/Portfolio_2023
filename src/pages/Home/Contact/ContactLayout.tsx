@@ -1,8 +1,10 @@
 import { Ref } from "react";
 import contact from "@/assets/contact.png";
+import darkContact from "@/assets/dark_contact.png";
 import email from "@/assets/email.png";
 
 import { FaSpinner } from "react-icons/fa";
+import { useTheme } from "@/components/helper/ThemeContext";
 
 type Props = {
   isLoading: boolean;
@@ -40,18 +42,25 @@ const ContactLayout = ({
     fullNameError.length === 0 &&
     messageError.length === 0 &&
     emailError.length === 0;
+  const { theme } = useTheme();
 
   return (
     <section id="contact">
-      <div className="mx-auto mt-40 flex w-4/6  flex-col  text-color-white">
+      <div className="mx-auto mt-40 flex w-4/6  flex-col  text-primary-100 dark:text-color-white">
         <h2 className="mx-auto text-3xl font-bold ">Connect with me</h2>
         <span className="mx-auto mt-1 w-44 border-b border-solid border-b-color-description"></span>
         <p className="description-text relative left-6  mx-auto mt-4 w-80 text-xl font-normal text-color-description sm:w-96">
           Currently looking for opportunities to learn and grow. If any, send me
-          an <span className="text-color-white">email</span> or message me on{" "}
+          an{" "}
+          <span className="font-bold text-primary-300 dark:text-color-white">
+            email
+          </span>{" "}
+          or message me on
           <a
             href="https://www.linkedin.com/in/denny-feng/"
-            className=" p-1  text-color-white underline transition-all delay-100 duration-100 ease-in hover:text-primary-pink"
+            className=" p-1  font-bold text-primary-300 underline transition-all delay-100 duration-100 ease-in hover:text-primary-pink
+            dark:text-color-white hover:dark:text-primary-pink
+            "
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,17 +71,23 @@ const ContactLayout = ({
       </div>
       <div className="mx-auto mt-2 flex h-auto  w-5/6 flex-col  flex-wrap justify-between py-24 text-color-white sm:flex-row">
         <div className="relative top-6 mx-auto  h-auto w-72 md:w-80">
-          <img src={contact} alt="contact me" />
+          {theme ? (
+            <img src={contact} alt="contact me" />
+          ) : (
+            <img src={darkContact} alt="contact me" />
+          )}
         </div>
         <form
           ref={formRef}
-          className="relative top-4 left-4 mx-auto mt-10  flex h-auto w-96  flex-col rounded-sm bg-color-white p-10 shadow-lg shadow-primary-pink sm:-top-6 sm:left-0 "
+          className="relative top-4 left-4 mx-auto mt-10  flex h-auto w-96  flex-col rounded-lg bg-primary-300 p-10 shadow-lg shadow-primary-100 dark:bg-color-white  dark:shadow-primary-pink   sm:-top-6 sm:left-0 "
         >
-          <h2 className="pb-6 text-primary-300">Send me an email</h2>
+          <h2 className="pb-6 text-color-white dark:text-primary-300">
+            Send me an email
+          </h2>
           <div className="flex w-72 flex-col">
             <label
               htmlFor="fullName"
-              className="description-text  px-1 text-xl font-bold text-color-description"
+              className="description-text  px-1 text-xl font-normal text-color-white dark:font-bold dark:text-color-description"
             >
               Full name
               <span className="text-rose-500">*</span>
@@ -96,8 +111,8 @@ const ContactLayout = ({
           </div>
           <div className="mt-3 flex w-72 flex-col">
             <label
-              htmlFor="email"
-              className="description-text  px-1 text-xl font-bold text-color-description"
+              htmlFor="fullName"
+              className="description-text  px-1 text-xl font-normal text-color-white dark:font-bold dark:text-color-description"
             >
               Email Address
               <span className="text-rose-500">*</span>
@@ -118,8 +133,8 @@ const ContactLayout = ({
           </div>
           <div className="mt-3 flex  w-72 flex-col">
             <label
-              htmlFor="message"
-              className="description-text  px-1 text-xl font-bold text-color-description"
+              htmlFor="fullName"
+              className="description-text  px-1 text-xl font-normal text-color-white dark:font-bold dark:text-color-description"
             >
               Message <span className="relative right-1 text-rose-500">*</span>
             </label>
