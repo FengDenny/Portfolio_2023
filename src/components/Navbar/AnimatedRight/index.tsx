@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "../../Links/Link";
 import { useTheme } from "@/components/helper/ThemeContext";
 import { BiMoon, BiSun } from "react-icons/bi";
+import Resume from "../../../Denny_Feng's_Resume.pdf";
 type Props = {
   isMenuToggled: boolean;
   setIsMenuToggled: (value: boolean) => void;
@@ -27,6 +28,9 @@ const index = ({
   const darkThemeStyle = "dark:text-color-white dark:bg-primary-300";
 
   const lightThemeStyle = "text-primary-100 bg-color-white";
+
+  const aLinkUnderLine =
+    " bg-zeroThree  bg-0-100  bg-no-repeat transition-bgSize5sEaseInOut  hover:bg-OneHund3Pixel bg-gradient-lightPink";
   return (
     <div
       className={`fixed right-0 bottom-0 z-1000 h-full w-[300px]  drop-shadow-xl ${
@@ -36,7 +40,10 @@ const index = ({
       {/* CLOSE ICON */}
       <div className="flex justify-end p-12">
         <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-          <XMarkIcon className="h-6 w-6 text-gray-400" />
+          <XMarkIcon
+            className="transition-color h-8 w-8 text-gray-400 delay-75 duration-75
+          hover:text-primary-300 dark:text-color-white dark:hover:text-color-description"
+          />
         </button>
       </div>
       {/* MENU ITEMS */}
@@ -58,9 +65,26 @@ const index = ({
             onClick={themeToggle}
             aria-label="Theme toggle"
           >
-            {theme ? <BiSun size={30} /> : <BiMoon size={30} />}
+            {theme ? (
+              <BiSun
+                size={30}
+                className="transition-color fill-primary-pink delay-75 duration-75 hover:fill-color-white"
+              />
+            ) : (
+              <BiMoon
+                size={30}
+                className="transition-color fill-color-description  delay-75 duration-75 hover:fill-primary-300"
+              />
+            )}
           </button>
-          {/* <button className="relative right-10">Download Resume</button> */}
+          <a
+            href={Resume}
+            target="_blank"
+            className={`${aLinkUnderLine} text-lg
+            text-color-description hover:text-primary-pink dark:text-color-white dark:hover:text-primary-pink`}
+          >
+            View Resume
+          </a>
         </div>
       </div>
     </div>
