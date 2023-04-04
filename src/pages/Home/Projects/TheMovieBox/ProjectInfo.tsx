@@ -5,9 +5,13 @@ import TMBHero from "@/assets/project_image/tmb_hero.png";
 import parse from "html-react-parser";
 import { tmb_stack } from "@/Model/tech_stack";
 import { tmb_snippets } from "@/Model/image_snippets";
+
 type Props = {};
 
 const ProjectInfo = (props: Props) => {
+  const helmetTitle =
+    "Denny Feng | TheMovieBox -  created with Firebase and TMDB API";
+
   const projectDescription_parsed = parse(
     `I have created this project as one of my full stack project for my ongoing project called 
     <span className="font-bold">Figma2Dev</span>. Using <span className="font-bold">high-fidelity mockups</span>, I would tweak it then turn it into pixel-perfect web applications using modern frameworks and different types of tech stack. The core concept of  developing  <span className="font-bold">TheMovieBox</span> was to learn <span className="font-bold">Firebase</span> from scratch.
@@ -43,6 +47,7 @@ const ProjectInfo = (props: Props) => {
 
   return (
     <ProjectInfoTemplate
+      helmetTitle={helmetTitle}
       imgLogo={TMB}
       imgLightLogo={TMBLight}
       projectDescription={projectDescription_parsed}

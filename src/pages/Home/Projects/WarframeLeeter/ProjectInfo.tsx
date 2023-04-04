@@ -8,6 +8,9 @@ import { wfl_snippets } from "@/Model/image_snippets";
 type Props = {};
 
 const ProjectInfo = (props: Props) => {
+  const helmetTitle =
+    "Denny Feng | WarframeLeeter - created with LeetCode's API/ GraphQL";
+
   const projectDescription_parsed = parse(
     `Bombing my first IBM coding interview, I found another <span className="font-bold">weakness</span> that I had, which was being proficient in
     <span className="font-bold">Data Structures and Algorithms</span>. I created 
@@ -31,15 +34,14 @@ const ProjectInfo = (props: Props) => {
     <div className="mt-4"></div>
     This enabled me to deep dive into working with <span className="font-bold">Promise API</span>. Working with Promise API allowed me to utilize the <span className="font-bold">DRY</span> principle. 
     I’m still not proficient with this principle yet nor working with Promises, but I am indeed getting better as I create more projects.  
-    
-    
-    
+ 
   `);
 
   const liveURL = "https://www.warframeleeter.com/";
 
   return (
     <ProjectInfoTemplate
+      helmetTitle={helmetTitle}
       imgLogo={WFL_dark}
       imgLightLogo={WFL}
       note={"Due to free tier backend hosting, API needs some time to load"}

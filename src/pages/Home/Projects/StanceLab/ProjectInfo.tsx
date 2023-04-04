@@ -8,6 +8,8 @@ import { stanceLab_snippets } from "@/Model/image_snippets";
 type Props = {};
 
 const ProjectInfo = (props: Props) => {
+  const helmetTitle = "Denny Feng | My first gig working with StanceLab";
+
   const projectDescription_parsed = parse(
     `My first gig was 
   <span className="font-bold">Stance Lab</span>, a single page application for a car shop business.  I built this project with another developer using 
@@ -32,6 +34,7 @@ const ProjectInfo = (props: Props) => {
   return (
     <ProjectInfoTemplate
       imgLogo={StanceLab}
+      helmetTitle={helmetTitle}
       imgLightLogo={StanceLabLight}
       projectDescription={projectDescription_parsed}
       stackLogo={stanceLab_stack}
