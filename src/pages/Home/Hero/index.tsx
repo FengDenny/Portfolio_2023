@@ -27,12 +27,12 @@ const index = (props: Props) => {
       sm:flex-row"
       >
         <div className="flex grow basis-4/5 flex-col">
-          <AnimateOnScrollObserver styling="animate-popIn ">
-            <div
-              className="mb-10 h-24 w-48 rounded-lg
+          <div
+            className="mb-10 h-24 w-48 rounded-lg
           bg-primary-pink shadow-xl dark:bg-primary-300"
-            >
-              <div className="flex flex-row">
+          >
+            <div className="flex flex-row">
+              <AnimateOnScrollObserver styling="animate-translateYBTop ">
                 <h2
                   className="py-4 pl-4 text-primary-300
             underline
@@ -41,18 +41,23 @@ const index = (props: Props) => {
                 >
                   Denny Feng
                 </h2>
+              </AnimateOnScrollObserver>
+              <AnimateOnScrollObserver styling="animate-float">
                 <span
                   className="relative top-6 left-1 text-xl
                text-color-description dark:text-primary-pink"
                 >
                   <FaRegHandPointDown />
                 </span>
-              </div>
+              </AnimateOnScrollObserver>
+            </div>
+            <AnimateOnScrollObserver styling="animate-translateYTBottom">
               <h4 className="relative left-2 pl-2 text-sm text-primary-300 dark:text-color-white">
                 Front End Engineer
               </h4>
-            </div>
-          </AnimateOnScrollObserver>
+            </AnimateOnScrollObserver>
+          </div>
+
           <AnimateOnScrollObserver styling="animate-inRight ">
             <h2
               className={`${darkThemeStyle} ${lightThemeStyle} w-64 text-2xl  sm:w-80 sm:text-3xl md:w-10/12 
