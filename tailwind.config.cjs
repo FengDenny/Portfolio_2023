@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -18,6 +19,8 @@ module.exports = {
           "linear-gradient(transparent, transparent), linear-gradient(#FCAFB7, #FCAFB7)",
         "gradient-white":
           "linear-gradient(transparent, transparent), linear-gradient(#fff, #fff)",
+        "gradient-dark":
+          "linear-gradient(transparent, transparent), linear-gradient(#1A1934, #1A1934)",
       },
       backgroundSize: {
         zeroThree: "0 3px",
