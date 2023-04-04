@@ -5,6 +5,9 @@ import Link from "./Links/Link";
 import { SelectedPage } from "@/Model/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import logo_png from "@/assets/logo_png.png";
+import light_logo from "@/assets/light_logo.png";
+import { useTheme } from "../helper/ThemeContext";
+import { BiMoon, BiSun } from "react-icons/bi";
 
 type Props = {
   isTopOfPage: boolean;
@@ -27,17 +30,35 @@ function Navbar({
 
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-300 drop-shadow";
+  const navbarBackground = isTopOfPage
+    ? ""
+    : "dark:bg-primary-300 bg-color-white  drop-shadow";
+
+  const { theme, setTheme } = useTheme();
+
+  const themeToggle = () => setTheme(!theme);
+
+  const darkThemeStyle = "dark:text-color-white";
+
+  const lightThemeStyle = "text-primary-100";
 
   return (
-    <nav>
+    <nav className={`${darkThemeStyle} ${lightThemeStyle}`}>
       <div
         className={`${navbarBackground} ${flexBetween}  fixed top-0 z-999 h-40 w-full  `}
       >
         <div className={`${flexBetween} relative top-5 mx-auto w-4/6`}>
           {/* LEFT SIDE */}
           <div className={`${flexBetween} w-2/6 gap-16 `}>
-            <img src={logo_png} alt="logo" className="h-28 w-28 rotate-45" />
+            {theme ? (
+              <img src={logo_png} alt="logo" className="h-28 w-28 rotate-45" />
+            ) : (
+              <img
+                src={light_logo}
+                alt="logo"
+                className="h-28 w-28 rotate-45"
+              />
+            )}
           </div>
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
@@ -57,7 +78,13 @@ function Navbar({
                 })}
               </div>
               <div className={`${flexBetween} gap-8`}>
-                <p>Theme toggle</p>
+                <button
+                  className="focus:outline-none"
+                  onClick={themeToggle}
+                  aria-label="Theme toggle"
+                >
+                  {theme ? <BiSun size={20} /> : <BiMoon size={20} />}
+                </button>
                 <button>Download Resume</button>
               </div>
             </div>
