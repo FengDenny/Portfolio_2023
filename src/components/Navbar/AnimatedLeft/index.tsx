@@ -2,7 +2,7 @@ import React from "react";
 import { SelectedPage } from "@/Model/types";
 import { navLinks } from "@/Model/navLinks";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import Link from "../Links/Link";
+import Link from "../../Links/Link";
 type Props = {
   isMenuToggled: boolean;
   setIsMenuToggled: (value: boolean) => void;
