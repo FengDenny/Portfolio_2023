@@ -45,7 +45,7 @@ const Tab = ({
               className={`${tabLabelUnderline} ${
                 selectedTab === tab.id
                   ? "text-primary-pink "
-                  : "text-primary-100 "
+                  : "text-color-white dark:text-primary-100"
               }  py-2 pr-5 text-lg transition  ease-in-out hover:text-primary-pink-hover`}
               type="button"
               role="tab"
