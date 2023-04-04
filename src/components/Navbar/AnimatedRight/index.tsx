@@ -3,6 +3,8 @@ import { SelectedPage } from "@/Model/types";
 import { navLinks } from "@/Model/navLinks";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "../Links/Link";
+import { useTheme } from "@/components/helper/ThemeContext";
+import { BiMoon, BiSun } from "react-icons/bi";
 type Props = {
   isMenuToggled: boolean;
   setIsMenuToggled: (value: boolean) => void;
@@ -15,13 +17,21 @@ const index = ({
   selectedPage,
   setSelectedPage,
 }: Props) => {
-  const activeSide = "transform transition-all duration-700 ";
-  const hiddenSide = "transition-all duration-700 translate-x-80 transform ";
+  const activeSide = "transform transition-all duration-100 ";
+  const hiddenSide = "transition-all duration-100 translate-x-80 transform ";
+
+  const { theme, setTheme } = useTheme();
+
+  const themeToggle = () => setTheme(!theme);
+
+  const darkThemeStyle = "dark:text-color-white dark:bg-primary-300";
+
+  const lightThemeStyle = "text-primary-100 bg-color-white";
   return (
     <div
-      className={`fixed right-0 bottom-0 z-1000 h-full w-[300px] bg-primary-300 drop-shadow-xl ${
+      className={`fixed right-0 bottom-0 z-1000 h-full w-[300px]  drop-shadow-xl ${
         isMenuToggled ? activeSide : hiddenSide
-      }`}
+      } ${darkThemeStyle} ${lightThemeStyle}`}
     >
       {/* CLOSE ICON */}
       <div className="flex justify-end p-12">
@@ -42,6 +52,16 @@ const index = ({
             />
           );
         })}
+        <div className={`flex flex-col items-start gap-8`}>
+          <button
+            className="focus:outline-none"
+            onClick={themeToggle}
+            aria-label="Theme toggle"
+          >
+            {theme ? <BiSun size={20} /> : <BiMoon size={20} />}
+          </button>
+          {/* <button className="relative right-10">Download Resume</button> */}
+        </div>
       </div>
     </div>
   );
