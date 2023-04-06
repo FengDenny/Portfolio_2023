@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-// import { tabs } from "@/Model/tabs";
 import Tabs from "@/components/Tab/Tab";
 import Acquired from "./Acquired";
 import Learning from "./Learning";
-import AnimateOnScrollObserver from "@/components/helper/AnimateOnScrollObserver";
 type Props = {};
 
 const tabs = [
   {
     id: 1,
-    label: "Acquired", // define Label
-    Component: Acquired, // assign Component
+    label: "Acquired",
+    Component: Acquired,
   },
   {
     id: 2,
@@ -36,18 +34,18 @@ const index = (props: Props) => {
       >
         Tech Stack
       </h2>
-      <AnimateOnScrollObserver styling="animate-popIn ">
-        <Tabs
-          labelStyling="mx-auto h-auto pt-5 shadow-2xl w-5/6 sm:w-2/6 py-5 dark:bg-color-white 
+
+      <Tabs
+        labelStyling="mx-auto h-auto pt-5 shadow-2xl w-5/6 sm:w-2/6 py-5 dark:bg-color-white 
            bg-primary-100  rounded-md mt-5 divide-y 
            transition-colors delay-100 duration-100 ease-in-out
+           animate-popIn
            "
-          selectedTab={selectedTab}
-          onClick={setSelectedTab}
-          tabs={tabs}
-          onMouseEnter={setSelectedTab}
-        />
-      </AnimateOnScrollObserver>
+        selectedTab={selectedTab}
+        onClick={setSelectedTab}
+        tabs={tabs}
+        onMouseEnter={setSelectedTab}
+      />
     </section>
   );
 };
