@@ -49,7 +49,7 @@ function Navbar({
       >
         <div className={`${flexBetween} relative top-5 mx-auto w-4/6`}>
           {/* LEFT SIDE */}
-          <div className={`${flexBetween} w-2/6 gap-16 `}>
+          <div className={`${flexBetween} w-4/6 gap-16 sm:w-2/6 `}>
             {theme ? (
               <img src={logo_png} alt="logo" className="h-28 w-28 rotate-45" />
             ) : (
@@ -63,7 +63,7 @@ function Navbar({
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
             <div className={`${flexBetween} w-full `}>
-              <div className={`${flexBetween} gap-8 text-sm`}>
+              <div className={`${flexBetween} gap-6 text-sm`}>
                 {navLinks.map((items: any) => {
                   const { title } = items;
 
@@ -77,7 +77,7 @@ function Navbar({
                   );
                 })}
               </div>
-              <div className={`${flexBetween} gap-8`}>
+              <div className={`${flexBetween} gap-4`}>
                 <button
                   className="focus:outline-none "
                   onClick={themeToggle}
@@ -106,7 +106,7 @@ function Navbar({
             </div>
           ) : (
             <button
-              className="rounded-full bg-primary-pink p-2"
+              className="relative left-4 rounded-full bg-primary-pink p-2 sm:left-0"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
               <Bars3Icon className="h-6 w-6 text-white hover:text-primary-300" />
