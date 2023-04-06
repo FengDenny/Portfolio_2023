@@ -6,8 +6,8 @@ import { navLinks } from "@/Model/navLinks";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTheme } from "../helper/ThemeContext";
 import { SelectedPage } from "@/Model/types";
-import email from "@/assets/email.png";
-import emailDark from "@/assets/email_dark.png";
+import email from "@/assets/email_light.svg";
+import emailDark from "@/assets/email_dark.svg";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -44,7 +44,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
         <div
           className={`relative top-12  mx-auto grid grid-cols-3  gap-4
           text-sm text-primary-100
-          dark:text-color-white
+          dark:text-color-white below397:grid-cols-1
           sm:mx-0 sm:grid-cols-2 sm:gap-x-4`}
         >
           {navLinks.map((items: any) => {
@@ -62,13 +62,21 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
           })}
         </div>
         <div className="relative top-16 sm:top-12">
-          <div className="flex flex-row justify-center py-4 ">
+          <div className="flex flex-row justify-center py-4  below397:flex-col">
             {theme ? (
-              <img src={emailDark} alt="email" className="" />
+              <img
+                src={emailDark}
+                alt="email"
+                className="bewlow397:w-32 mx-auto sm:w-20"
+              />
             ) : (
-              <img src={email} alt="email" />
+              <img
+                src={email}
+                alt="email"
+                className="bewlow397:w-32 mx-auto sm:w-20"
+              />
             )}
-            <span className="description-text text-color-primary-100 relative top-1 px-2 dark:text-color-white">
+            <span className="description-text text-color-primary-100 relative top-1  px-2 dark:text-color-white sm:top-8">
               fengdennyy@gmail.com
             </span>
           </div>
