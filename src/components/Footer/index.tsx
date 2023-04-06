@@ -67,7 +67,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
               <img
                 src={emailDark}
                 alt="email"
-                className="mx-auto w-24 below397:w-32 sm:w-20"
+                className="w-24 below397:w-32 xs:mx-auto sm:w-20"
               />
             ) : (
               <img
