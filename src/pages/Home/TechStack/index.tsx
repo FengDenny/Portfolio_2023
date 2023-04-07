@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tabs from "@/components/Tab/Tab";
+import Tabs from "@/components/tab/Tab";
 import Acquired from "./Acquired";
 import Learning from "./Learning";
 type Props = {};
