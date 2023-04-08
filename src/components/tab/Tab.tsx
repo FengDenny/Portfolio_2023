@@ -26,7 +26,7 @@ const Tab = ({
 }: Props): JSX.Element => {
   const Panel = tabs && tabs.find((tab) => tab.id === selectedTab);
   const tabLabelUnderline =
-    "bg-zeroThree  bg-0-100  bg-no-repeat  hover:bg-Ninety3Pixel hover:bg-gradient-lightPink hover:transition-bgSize5sEaseInOut delay-75 duration-75 transition-all";
+    "bg-zeroThree  bg-0-100  bg-no-repeat  hover:bg-Ninety3Pixel hover:bg-gradient-lightPink hover:transition-bgSize5sEaseInOut delay-75 duration-75 transition-all xs:hover:bg-OneHund3Pixel";
 
   return (
     <div className={labelStyling ? labelStyling : imageStyling}>
