@@ -34,7 +34,7 @@ const index = (props: Props) => {
       id="projects"
       styling={`relative flex  w-full flex-col gap-2   
   `}
-      primaryColorBGStyle="bg-primary-300  -inset-8 rounded-tl-3-xl rounded-bl-3xl"
+      primaryColorBGStyle="bg-primary-300  inset-0  rounded-tl-3-xl rounded-bl-3xl"
     >
       <h2 className="z-40 mx-auto flex w-4/6  justify-center pt-24 text-lg text-color-white underline decoration-color-description underline-offset-4 sm:justify-end sm:text-2xl">
         Projects
