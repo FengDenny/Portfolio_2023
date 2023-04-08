@@ -4,7 +4,7 @@ type Props = {};
 
 const Learning = (props: Props) => {
   return (
-    <ul className="gap-4sm:grid-cols-2 inline-grid grid-cols-2 sm:gap-6">
+    <ul className="inline-grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-6">
       <img src={TSLogo} alt="TypeScript" />
       <img src={Tailwind} alt="Tailwind" />
     </ul>
