@@ -73,12 +73,11 @@ module.exports = {
       },
 
       animation: {
-        fadeIn: " fadeIn 1.5s ease-in",
+        fadeIn: " fadeIn 1.5s forwards",
         inRight: "right 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);",
         inLeft: "left 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86)",
         popIn: "popIn 0.5S cubic-bezier(0.26, 0.53, 0.74, 1.48)",
-        slideLeft:
-          "slideLeft 2s ease-out forwards cubic-bezier(.17,.67,.94,-0.21)",
+        slideLeft: "slideLeft 2s ease-out  cubic-bezier(.17,.67,.94,-0.21)",
         appear: "appear 1s ease-in forwards",
         spin: " spin 1s linear infinite",
         float: "float 2s ease-in-out infinite",
